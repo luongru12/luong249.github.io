@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Динь Дык Лыонг - Резюме</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #34495e;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .photo-container {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid var(--light-color);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .title {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        section {
+            padding: 60px 0;
+            background: white;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        section:nth-child(even) {
+            background: var(--light-color);
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--secondary-color);
+            display: inline-block;
+        }
+        
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        
+        .education-item, .experience-item {
+            margin-bottom: 30px;
+        }
+        
+        .education-item h3, .experience-item h3 {
+            color: var(--dark-color);
+            margin-bottom: 5px;
+        }
+        
+        .date {
+            color: var(--secondary-color);
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .skill-category {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .skill-category h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .skill-list {
+            list-style-type: none;
+        }
+        
+        .skill-list li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .skill-list li:before {
+            content: "•";
+            color: var(--secondary-color);
+            position: absolute;
+            left: 0;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        footer {
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="profile">
+                <div class="photo-container">
+                    <img src="photo.jpg" alt="Динь Дык Лыонг">
+                </div>
+                <div>
+                    <h1>Динь Дык Лыонг</h1>
+                    <p class="title">Студент по информационной безопасности</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section id="about">
+            <h2>Обо мне</h2>
+            <div class="content">
+                <div>
+                    <p>Мотивированный студент университета ИТМО, факультет информационной безопасности, с сильным интересом к кибербезопасности, анализу уязвимостей и защите данных. Ищу возможности для применения и развития своих навыков в реальных проектах.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="education">
+            <h2>Образование</h2>
+            <div class="content">
+                <div class="education-item">
+                    <h3>Университет ИТМО</h3>
+                    <p class="date">2022 - настоящее время</p>
+                    <p>Факультет информационной безопасности</p>
+                    <p>Специализация: Защита информации в компьютерных системах</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="skills">
+            <h2>Навыки</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Технические навыки</h3>
+                    <ul class="skill-list">
+                        <li>Python</li>
+                        <li>C++</li>
+                        <li>Linux/Unix</li>
+                        <li>Сетевые технологии</li>
+                        <li>Базы данных (SQL)</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Информационная безопасность</h3>
+                    <ul class="skill-list">
+                        <li>Криптография</li>
+                        <li>Анализ уязвимостей</li>
+                        <li>Защита сетей</li>
+                        <li>Этичный хакинг</li>
+                        <li>Форензика</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Языки</h3>
+                    <ul class="skill-list">
+                        <li>Русский (продвинутый)</li>
+                        <li>Английский (средний)</li>
+                        <li>Вьетнамский (родной)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section id="projects">
+            <h2>Проекты</h2>
+            <div class="content">
+                <div class="experience-item">
+                    <h3>Анализ уязвимостей веб-приложения</h3>
+                    <p class="date">2025</p>
+                    <p>Провел анализ безопасности веб-приложения, выявил и документировал уязвимости, предложил меры по их устранению.</p>
+                </div>
+                <div class="experience-item">
+                    <h3>Разработка системы шифрования</h3>
+                    <p class="date">2024</p>
+                    <p>Создал программу для шифрования и дешифрования текстовых сообщений с использованием алгоритма AES.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact">
+            <h2>Контакты</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span>Email: dinhducluong12312@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <span>Телефон: +7 (960) 335-55-66</span>
+                </div>
+                <div class="contact-item">
+                    <span>Город: Санкт-Петербург</span>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Динь Дык Лыонг. Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>
